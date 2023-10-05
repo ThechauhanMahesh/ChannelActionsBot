@@ -56,16 +56,4 @@ composer.on("chat_join_request", async (ctx) => {
   );
 
   // try to send a message
-  try {
-    await ctx.api.sendMessage(
-      update.user_chat_id,
-      welcome,
-    );
-  } catch (error) {
-    if (error.error_code == 403) return;
-    console.log("Error while sending a message: ", error.message);
-    return;
-  }
-});
-
-export default composer;
+  
